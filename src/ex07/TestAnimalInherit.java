@@ -55,7 +55,25 @@ public class TestAnimalInherit {
 //		neo.cry();
 		
 	}
-
+	//2. 동일한 부모 클래스를 상속한 경우 하나의 함수로 구현가능 
+	private static void work(Animal animal, String name) { // 부모는 자식을 못 받지만 자식은 부모를 받을 수 있다
+        animal.name = name;
+		animal.eat();		
+      //animal.bark(); > class Animal에는 바크가 없다 >> class 강제 변환 해줘야 함 
+		if(animal instanceof Dog) // animal이 Dog 타입에서 호출된 것인가? 호출이 됐다면 뒤에 '.'을 붙이고 찾으면 됨	
+		  ((Dog) animal).bark(); // () --> animal을 dog 타임으로 바꿔라 
+		
+		if(animal instanceof Cat)
+		  ((Cat) animal).meow();
+		
+		if(animal instanceof Tiger)
+		  ((Tiger) animal).cry();
+		
+	}
+	
+	
+    /* 1. 메서드 오버로딩으로 처리 가능 (아래 방식)
+       
 	private static void work(Tiger neo, String string) {
 		neo.name = "네오";
 		neo.eat();
@@ -75,5 +93,8 @@ public class TestAnimalInherit {
 		chu.eat();
 		chu.bark();
 		
-	}
+	} 
+	*/
+
+
 }
