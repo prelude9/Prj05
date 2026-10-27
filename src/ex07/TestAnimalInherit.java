@@ -31,7 +31,7 @@ class Tiger extends Animal{
 public class TestAnimalInherit {
 
 	public static void main(String[] args) { // 여기에 있는 메서드만 출력!!!  
-		Dog chu  = new Dog();
+		Dog chu  = new Dog(); 
 		work(chu, "츄");  		
 //		chu.name = "츄";
 //		chu.eat();
