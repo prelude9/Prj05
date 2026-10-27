@@ -3,11 +3,15 @@ package ex06;
 class Animal {
 	String name;
 	void eat() {
-		System.out.println(name + "(이)가 먹는다");
+		System.out.println(name + "(이)가 먹는다"); // 부모로 뽑음 
 	}
 }
 
-class Dog extends Animal { // 동일한 패키지 안에서는 'Dog'를 동일로 인식하므로 주의! 
+// bark, meow, cry도 어떻게 보면 같은 소리를 내는 것인데 하나로 통일할 수 없을까?
+// 하지만 이름은 같다 하더라도 기능(결과)가 달라짐 
+// 한번 효율적으로 코딩해볼까?
+// abstract, 인터페이스로 접근 가능, 인터페이스는 스프링을 할 때 매우 중요한 개념임 
+class Dog extends Animal {  
 	void bark() {
 		System.out.println(name + "(이)가 멍멍");
 	}
