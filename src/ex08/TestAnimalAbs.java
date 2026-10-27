@@ -1,9 +1,10 @@
 package ex08;
-
+// abstract(추상) class를 이용한 다형성구현 방법2
+// overlaod와 override의 차이점은 무엇인가! 
  abstract class Animal {
 	String name;
 	void eat(String food) {
-		System.out.println(name + "(이)가_" + food + "을(를) 먹는다");
+		System.out.println(name + "(이)가 " + food + "을(를) 먹는다");
 	}
 	 abstract void sound(); // 하지만 코딩은 자식에게 맡기겠어. 다 다르니까. 
 	                        // {} 없다는 것은 코딩을 하지 않겠다는 뜻임
@@ -41,6 +42,12 @@ public class TestAnimalAbs {
 		// Animal ani = new Animal(); --> abstract class는 불가능함. 코딩이 없으므로 
         Dog chu = new Dog();
         work(chu, "츄", "개껌");
+        
+        Cat nero = new Cat();
+        work(nero, "네로", "츄르");
+        
+        Tiger neo = new Tiger();
+        work(neo, "네오", "쑥");  //출력이 되는 지점은 main, 형태는 위의 class의 sysout을 따름 
 	}
 
 	private static void work(Animal animal, String name, String food) {
