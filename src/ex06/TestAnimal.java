@@ -27,7 +27,7 @@ class Tiger extends Animal{
 
 public class TestAnimal {
 
-	public static void main(String[] args) { // 여기에 출력 함수가 없으면 출력되는 것은 없다! 
+	public static void main(String[] args) { // 여기에 있는 메서드만 출력!!!  
 		Dog chu  = new Dog();
 		chu.name = "츄";
 		chu.eat();
