@@ -55,7 +55,7 @@ public class TestAnimalInherit {
 //		neo.cry();
 		
 	}
-	//2. 동일한 부모 클래스를 상속한 경우 하나의 함수로 구현가능 
+	//2. 동일한 부모 클래스를 상속한 경우 하나의 함수로 구현가능  > 추천하지는 않음
 	private static void work(Animal animal, String name) { // 부모는 자식을 못 받지만 자식은 부모를 받을 수 있다
         animal.name = name;
 		animal.eat();		
