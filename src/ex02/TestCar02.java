@@ -11,6 +11,7 @@ package ex02;
 class Car { //클래스는 전역변수를 묶어 놓은 것 
 	// Fields
 	// 반복되는(공통) 변수 : name, color, year
+	// 자바의 모든 필드 변수를 앞에 private을 붙여야 하는데 여기서는 그렇게 하지 않음
 	String   name;
 	String   color; //앞에 private이 없으면 해당 패키지 폴더안에서만 사용 가능
 	int      year;
@@ -23,7 +24,7 @@ class Car { //클래스는 전역변수를 묶어 놓은 것
 	void info() {
 		System.out.println("차이름: " + name );
 		System.out.println("색상: " + color);
-		System.out.println("연식: " + year);
+		System.out.println("연식: " + year + "\n");
 	}
 }
 
