@@ -21,11 +21,10 @@ class GirlMember { //class 뒤의 이름은 달라야 함!
 	}
 
 	// method
-	public void info() {// <2>인포는 메서드라서 중괄호가 필요하다, return을 안 쓸꺼면 void
+	public void info() {// <2> 인포는 메서드라서 중괄호가 필요하다, return을 안 쓸꺼면 void
 		int age = LocalDateTime.now().getYear() - this.bYear; //this 붙여도 되고 안 붙여도 되고
 		System.out.printf("%S   %d년생(%d살)  %s\n",
 				          name,  bYear, age,  role);     
-
 	}
 }
 

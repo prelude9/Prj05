@@ -9,7 +9,9 @@ package ex08;
 	 abstract void sound(); // 하지만 코딩은 자식에게 맡기겠어. 다 다르니까. 
 	                        // {} 없다는 것은 코딩을 하지 않겠다는 뜻임
 	                        // abstract로 하겠어. 위에 'abstract class ___' 생성
-	                        // 추상 메서드라고 명명함 
+	                        // 추상 메소드라고 명명함 
+	                        // ()만 있고 뒤에 {}가 없으면 오류가 나는데 abstract가 있으면 오류가 나지 않는다    
+	                        // sound를 상속 받은 애가 코딩해! 
 }
 class Dog extends Animal {
 	@Override  //add unimplemented method, 재정의. abstract 메소드를 자식이 다시 작성한다

@@ -22,16 +22,16 @@ class GMember {  // 소문자 대문자 구분 잘할것
 		System.out.println("Hi 방가...");     // 변수를 중복이 안 되지만 함수는 인자와 변수가 다르면 쓸 수 있다
 	}
 	// 모든 인자가 있는 생성자, AllArgsConstructor 
-	public GMember(String name, int bY, String r) {
+	public GMember(String name, int bYear, String role) {
 		this.name  = name; //this를 붙이면 전역변수의 name을 의미한다, 필드변수와 지역변수를 구별하기 위해
-		this.bYear = bY;
-		this.role  = r;
+		this.bYear = bYear;
+		this.role  = role;
 	}
 	
 	// 메소드 : public
 	public void info() {
 		int age = LocalDate.now().getYear() - bYear;
-		System.out.printf("%s    %d년(%세)    %s\n ",
+		System.out.printf("%s    %d년(%d세)    %s\n ",
           				  name , bYear, age, role);
 	}
 }
@@ -50,10 +50,7 @@ public class MemberTest {
 
 		GMember r2 = null;
 		System.out.println(r2);
-		*/
-		
-		GMember r0 = new GMember();
-		/*
+
 		r1.name = "원이";  >> 오류 발생  
 		오류: 'The field GMember.name is not visible'
 		오류 원인: private 변수를 .으로 직접 사용 했기 때문 
@@ -62,9 +59,18 @@ public class MemberTest {
 		GMember r1 = new GMember("원이", 2004, "리더");
 		r1.info();
 		
+		GMember r2 = new GMember("리브", 2006, "보컬");
+		r2.info();
+		
+		GMember r3 = new GMember("미나미", 2006, "보컬");
+		r3.info();
+		
+		GMember r4 = new GMember("메이", 2008, "랩");
+		r4.info();
+		
+		GMember r5 = new GMember("제나", 2009, "보컬");
+		r5.info();
 		// 2. Getter / Setter를 사용 
 		
-
-	
 	}
 }
