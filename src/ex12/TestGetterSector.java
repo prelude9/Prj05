@@ -60,7 +60,7 @@ public class TestGetterSector {
 		emp1.info();
 				
 		System.out.println("");
-	//int neweno = emp1.getEno();
+	// int neweno = emp1.getEno();
     // System.out.println(neweno);
 	    
 	    Emp emp2 = new Emp(2, "카리나", "010-1111-1111");
